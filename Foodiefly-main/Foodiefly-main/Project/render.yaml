@@ -2,8 +2,8 @@ services:
   - type: web
     name: foodiefly
     env: static
-    buildCommand: npm install && npm run build  # ← Fixed this line
-    staticPublishPath: ./dist
+    buildCommand: cd Project && npm install && npm run build  # ← Fixed
+    staticPublishPath: Project/dist  # ← Fixed
     routes:
       - type: rewrite
         source: /*
