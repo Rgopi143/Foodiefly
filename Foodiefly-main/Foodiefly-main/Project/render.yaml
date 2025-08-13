@@ -2,7 +2,7 @@ services:
   - type: web
     name: foodiefly
     env: static
-    buildCommand: npm ci --only=production && npm run build
+    buildCommand: npm install && npm run build  # ← Fixed this line
     staticPublishPath: ./dist
     routes:
       - type: rewrite
